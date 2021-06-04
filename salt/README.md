@@ -29,7 +29,7 @@ We are hooking the container onto the host network instead of a bridge. Also
 The minion id is defined in the `entrypoint.sh` and is `vscapa_minion` by default.
  
  
-###Running Salt Master
+### Running Salt Master
 The Salt Master container is run external to the Evo device. There are a couple of
  files that need to be volume mounted to the Master container.
  
