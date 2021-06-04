@@ -1,0 +1,17 @@
+modules:
+  if_mib:  # The module name. You can have as many modules as you want.
+    walk:       # List of OIDs to walk. Can also be SNMP object names or specific instances.
+      - 1.3.6.1.2.1.2              # Same as "interfaces"
+      - sysUpTime                  # Same as "1.3.6.1.2.1.1.3"
+      - 1.3.6.1.2.1.31.1.1.1.6  # Instance of "ifHCInOctets" with index "40"
+
+    version: 2
+    max_repetitions: 25
+    retries: 3
+    timeout: 5s
+
+    auth:
+      community: public # Should be same as the snmp community set on the Evo device
+      username: root  # Username to access Evo device
+      security_level: noAuthNoPriv
+      password: xxxx  # Password to access Evo device

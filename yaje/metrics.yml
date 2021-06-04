@@ -1,0 +1,16 @@
+metrics:
+  - name: interfaces
+    rpc-request:
+      name: get-interface-information
+      subkey: terse
+    rpc-response:
+      type: list
+      list_key: physical-interface
+      fields:
+        - name: interface
+          type: info
+          unique_id: name
+          keys:
+            - name
+            - admin-status
+            - oper-status
