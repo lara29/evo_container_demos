@@ -14,3 +14,8 @@ Juniper devices running the Evo OS are capable of running Docker containers and
 
  The repo contains the necessary files and configs to demonstrate the above two
   use-cases.
+
+### Enabling Docker on vScapa
+Start and run the docker daemon by executing the below command:
+1. systemctl start docker@vrf0
+2. export DOCKER_HOST=unix:///run/docker-vrf0.sock
